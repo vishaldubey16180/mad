@@ -1,0 +1,34 @@
+<div style="text-align:center;">
+  <h1>Receive Packages</h1>
+  <br />
+ 
+  </div>
+  <br />
+  <div class="table-responsive">
+    <table class="table" style="border:5px solid rgba(220,230,242,1);">
+      <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+        <th style="text-align:center;">AWB Number</th>
+        <th style="text-align:center;">Name</th>
+        <th style="text-align:center;">EmailId</th>
+        <th style="text-align:center;">From location</th>
+        <th style="text-align:center;">To Address</th>
+        <th style="text-align:center;">Action</th>
+       
+      </tr>
+      <tr *ngFor="let p of scheduledPickup" style="background-color:white;text-align:center;">
+        <td name="awb" >{{p.aWBNumber}}      </td>
+        <td name="cname" > {{p.name }} </td>
+        <td name="email"> {{p.emailId}} </td>
+        <td name="city"> {{city}} </td>
+        <td name="deladd"> {{p.deliveryAddress}} </td>
+        <td><button type="button" (click)="pickup(p.name,p.emailId,city,p.deliveryAddress)">Picked Up</button></td>
+        <td><button type="button" (click)="delivered(p.name,p.emailId,city,p.deliveryAddress)">Delivered</button></td>
+        <!--<td><img title="Add to cart" [src]="imageSrc"></td>-->
+      </tr>
+    </table>
+  </div>
+  <div *ngIf="showMsgDiv" style="">
+    <h4 class="jumbotron" style="text-align:center;">No products available</h4>
+  </div>
+
+

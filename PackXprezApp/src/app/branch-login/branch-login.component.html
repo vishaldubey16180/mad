@@ -1,0 +1,59 @@
+
+<div class="container">
+  <div style="text-align:center; background-color:antiquewhite">
+    <br />
+    <h2> Branch officer Login</h2>
+    <br />
+    <h6>All fields are mandatory</h6>
+    <br />
+    <form #loginForm="ngForm" (ngSubmit)="BranchOfficerLogin(loginForm)">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+          <label>Email Id</label>
+        </div>
+        <div class="col-md-5">
+          <input class="form-control" #emailValidator="ngModel" name="emailId" type="email" ngModel required pattern="^[\w]+@[\w]+[\.][\w]+$">
+          <div *ngIf="emailValidator.errors && (emailValidator.dirty || emailValidator.touched)">
+            <div [hidden]="!emailValidator.errors.required">
+              Email id is mandatory
+            </div>
+            <div [hidden]="!emailValidator.errors.pattern">
+              Email id is invalid
+            </div>
+          </div>
+          <!--<div [hidden]="emailValidator.valid || emailValidator.pristine">
+            Email id is mandatory
+          </div>-->
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+          <label>Password</label>
+        </div>
+        <div class="col-md-5">
+          <input class="form-control" #passwordValidator="ngModel" name="userPassword" type="password" ngModel required>
+          <div *ngIf="passwordValidator.errors && (passwordValidator.dirty || passwordValidator.touched)">
+            <div [hidden]="!passwordValidator.errors.required">
+              Password is mandatory
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+
+      </div>
+      <br />
+      <div class="form-group" style="text-align:center">
+        <button type="submit" class="btn-link" [disabled]="loginForm.form.invalid">Login</button>
+      </div>
+      <br />
+      <div *ngIf="showDiv" style="color:red;text-align:center;">
+        <br />
+        {{msg}}
+      </div>
+    </form>
+  </div>
+</div>

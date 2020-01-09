@@ -1,0 +1,121 @@
+<app-commonlayout></app-commonlayout>
+<div class="container">
+  <div style="text-align:center; background-color:antiquewhite">
+    <br />
+    <h2>Register</h2>
+    <br />
+    <h6>All fields are mandatory</h6>
+    <br />
+    <form #registrationForm="ngForm" (ngSubmit)="addregister(registrationForm)">
+
+      <div class="top-row">
+        <div class="field-wrap">
+          <label>Name</label>&nbsp;&nbsp;
+          <input type="text" name="name" required pattern="^[a-zA-z]+([\s][a-zA-Z]+)+$" ngModel/>
+        </div>
+      </div>
+      <br />
+      <div class="top-row">
+        <div class="field-wrap">
+          <label>Email Id</label>&nbsp;&nbsp;
+          <input class="form-control" #emailValidator="ngModel" type="email" name="emailId" required pattern="^[\w]+@[\w]+[\.][\w]+$" ngModel />
+        </div>
+        <div *ngIf="emailValidator.errors && (emailValidator.dirty || emailValidator.touched)">
+          <div [hidden]="!emailValidator.errors.required">
+            Email Id is mandatory
+          </div>
+          <div [hidden]="!emailValidator.errors.pattern">
+            Email Id is invalid
+          </div>
+        </div>
+
+
+      </div>
+      <br />
+      <div class="top-row">
+        <div class="field-wrap">
+          <label>Password</label>&nbsp;&nbsp;
+          <input class="form-control" #passwordValidator="ngModel" type="password" name="userPassword" maxlength="16" minlength="8" required ngModel/>
+        </div>
+        <div *ngIf="passwordValidator.errors && (passwordValidator.dirty || passwordValidator.touched)">
+          <div [hidden]="!passwordValidator.errors.required">
+            Password is required
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="top-row">
+        <div class="field-wrap">
+          <label>ConfirmPassword</label>&nbsp;&nbsp;
+          <input class="form-control" #confirmpasswordValidator="ngModel" type="password" name="confirmuserPassword" maxlength="16" minlength="8" required ngModel />
+        </div>
+        <div *ngIf="confirmpasswordValidator.value!=passwordValidator.value">
+          Password is required
+          <div [hidden]="!passwordValidator.errors.required">
+            password is invalid 
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="top-row">
+        <div class="field-wrap">
+          <label>ContactNumber</label>&nbsp;&nbsp;
+          <input class="form-control" #ContactNo="ngModel" type="text" name="userNumber" maxlength="10" required pattern="[0-9]10}" ngModel/>
+        </div>
+        <div *ngIf="ContactNo.errors && (ContactNo.dirty || ContactNo.touched)">
+          <div [hidden]="!ContactNo.errors.required">
+            contactNo is mandatory
+          </div>
+          <div [hidden]="!ContactNo.errors.pattern">
+            contact no is invalid
+          </div>
+        </div>
+      </div>
+      <br />
+      <h4>Address</h4>
+      <div class="top-row">
+        <div class="field-wrap">
+          <label>BuildingNumber</label>&nbsp;&nbsp;
+          <input class="form-control" #BuildingNo type="text" name="buildingNo" required pattern="^[A-Za-z0-9]+$" ngModel />
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="top-row">
+        <div class="field-wrap">
+          <label>StreetNo</label>&nbsp;&nbsp;
+
+          <input type="text" name="streetNo" ngModel/>
+        </div>
+      </div>
+      <br />
+      <div class="top-row">
+        <div class="field-wrap">
+          <label>Locality</label>&nbsp;&nbsp;
+          <input type="text" name="locality" ngModel />
+        </div>
+      </div>
+      <br />
+      <div class="top-row">
+        <div class="field-wrap">
+          <label>Pincode</label>&nbsp;&nbsp;
+          <input  #pincodeno type="text" name="pincode" length="6" required pattern="[0-9]10" ngModel/>
+
+        </div>
+        <br />
+
+      </div>
+      <br />
+      <div class="top-row">
+        <div class="field-wrap">
+          
+            <button type="submit" class="btn-link">Register</button>
+
+            &nbsp;&nbsp;
+
+            <button type="reset" class="btn-link">Cancel</button>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>
