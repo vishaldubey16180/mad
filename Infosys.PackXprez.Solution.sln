@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infosys.PackXprez.DataAccessLayer", "Infosys.PackXprez.DataAccessLayer\Infosys.PackXprez.DataAccessLayer.csproj", "{681A7E76-86A9-4097-ACE9-631495835BDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infosys.PackXprez.WebService", "Infosys.PackXprez.WebService\Infosys.PackXprez.WebService.csproj", "{58813A0E-8701-49CD-B17D-95A35DF899A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{681A7E76-86A9-4097-ACE9-631495835BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{681A7E76-86A9-4097-ACE9-631495835BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{681A7E76-86A9-4097-ACE9-631495835BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{681A7E76-86A9-4097-ACE9-631495835BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58813A0E-8701-49CD-B17D-95A35DF899A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58813A0E-8701-49CD-B17D-95A35DF899A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58813A0E-8701-49CD-B17D-95A35DF899A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58813A0E-8701-49CD-B17D-95A35DF899A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27521B55-9AFC-4750-B6A7-10AA22F5629F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://myshcietatfs:8080/tfs/mstrack_training
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Infosys.PackXprez.DataAccessLayer\\Infosys.PackXprez.DataAccessLayer.csproj
+		SccProjectName1 = Infosys.PackXprez.DataAccessLayer
+		SccLocalPath1 = Infosys.PackXprez.DataAccessLayer
+		SccProjectUniqueName2 = Infosys.PackXprez.WebService\\Infosys.PackXprez.WebService.csproj
+		SccProjectName2 = Infosys.PackXprez.WebService
+		SccLocalPath2 = Infosys.PackXprez.WebService
+	EndGlobalSection
+EndGlobal
